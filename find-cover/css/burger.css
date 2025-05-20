@@ -1,0 +1,165 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 動畫 */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250px);
+  }
+}
+
+/* body:after 遮罩（可選） */
+body:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+  pointer-events: none;
+}
+
+body.open:after {
+  display: block;
+  pointer-events: auto;
+}
+
+/* 折疊選單區 */
+.b-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 110;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.b-nav.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.b-nav li {
+  list-style-type: none;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 18px;
+  animation-fill-mode: both;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.b-nav.open li {
+  animation: slideInLeft 0.4s forwards;
+}
+
+.b-nav:not(.open) li {
+  animation: slideOutLeft 0.4s forwards;
+}
+
+.b-nav li:first-child {
+  padding-top: 100px;
+}
+
+.b-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.b-link:hover,
+.b-link--active {
+  border-left: 2px solid #cedee6;
+  padding-left: 10px;
+  text-decoration: none;
+    color: rgba(255, 255, 255, 1)
+}
+
+/* 漢堡按鈕 */
+.b-container {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 60px;
+  z-index: 120;
+}
+
+.b-menu {
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 121;
+}
+
+.b-bun {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #c4c4be;
+  transition: all 0.3s ease;
+}
+
+.b-bun--top {
+  top: 0;
+}
+
+.b-bun--mid {
+  top: 8px;
+}
+
+.b-bun--bottom {
+  top: 16px;
+}
+
+.b-container.open .b-bun--top {
+  transform: rotate(45deg);
+  top: 9px;
+  background: #444;
+}
+
+.b-container.open .b-bun--mid {
+  opacity: 0;
+}
+
+.b-container.open .b-bun--bottom {
+  transform: rotate(-45deg);
+  top: 9px;
+  background: #444;
+}
+
+/* 品牌名稱（可選） */
+.b-brand {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 40px;
+  position: relative;
+  top: -20px;
+  z-index: 122;
+  text-decoration: none;
+}

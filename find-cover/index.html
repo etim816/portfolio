@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="">
+  <title>Find My Professor</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css"/>
+  <link rel="stylesheet" href="css/burger.css">
+
+</head>
+<body>
+  <!-- banner -->
+  <section id="banner">
+    <div class="new-nav" id="myAnchor">
+        <div class="b-nav">
+            <li><a class="b-link" href="#">Intro</a></li>
+            <li><a class="b-link" href="#">VR</a></li>
+            <li><a class="b-link" href="#">紀綠</a></li>
+        </div>
+        <div class="b-container">
+            <div class="b-menu">
+                <div class="b-bun b-bun--top"></div>
+                <div class="b-bun b-bun--mid"></div>
+                <div class="b-bun b-bun--bottom"></div>
+            </div>
+            <a href="#" class="b-brand"></a>
+        </div>
+    </div>
+
+    <div class="bg-wrapper"></div>
+    <div class="intro">
+        <h1>指導教授在哪裡？</h1>
+        <h2>結合
+          <span>AR</span>
+          與<span>尋找指導教授</span>主題的互動體驗遊戲</h2>
+        <a class="btn btn-outline-secondary btn-main" href="#">VR</a>
+    </div>
+  </section>
+  
+  <!-- Activities -->
+  <section id="pic2">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-12">
+          <h3>遊戲目標</h3>
+          <p>幫助玩家了解不同教授的研究風格與領域，探索自身學術興趣，並最終選擇最契合的指導教授</p>
+        </div>
+       <div class="col-12">
+          <h3>核心元素</h3>
+          <ul>
+            <li>AR互動：透過手機或AR眼鏡掃描實體空間，實現虛實融合的互動體驗</li>
+            <li>會動的名畫：經典名畫中的人物或場景將「動起來」，進行語音引導或情境對話</li>
+            <li>分歧選擇與解謎任務：玩家依據選擇進入不同支線劇情，觸發不同挑戰與資訊</li>
+            <li>模擬面談體驗：以AR呈現與教授的虛擬問答或互動對談場景</li>
+            <li>個人化學術傾向建模：根據玩家的行為與選擇，建構個人建議導師清單</li>
+        </ul>
+        </div>
+
+        
+    </div>
+  </section>
+  <!-- support -->
+  <section id="support">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 col-12"><h1>Professor</h1></div>
+        <div class="col-lg-9 col-md-12 col-12">
+          <div class="row item-group">
+            <div class="col-md-4 col-6">
+              <a class="item" href="#" target="_blank"><img src="img/img_wang.png" class="img-fluid w-100"><p>王聖銘</p></a>
+            </div>
+            <div class="col-md-4 col-6">
+              <a class="item" href="#" target="_blank"><img src="img/img_tai.png" class="img-fluid w-100"><p>戴楠青</p></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </section>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <footer><p>©2025 All rights reserved</p></footer>  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script>
+      let mybutton = document.getElementById("myBtn");
+
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+      }
+  </script>
+  <script src="js/burger.js"></script>  
+
+</body>
+
+</html>
